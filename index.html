@@ -1,63 +1,139 @@
-<title>Out at dark download</title>
+<!DOCTYPE html>
 <style>
-    h1 {
+    body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    h3 {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    li {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    a{
+    a {
         color: #000;
     }
+
+    button {
+        border-style: none;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    button:hover {
+        background-color: #888;
+    }
 </style>
-<h1>
-    <a href="Out at dark 1.1.zip">Download Latest Version<br></a>
-</h1>
-<p>
-    Note: This page is for windows downloads<br>
-    <a href="https://sampaca1.github.io/Mac">To Mac</a>
-</p>
-<h3>
-    <a href="Out at dark 1.0.zip">Download version 1.0 </a>
-</h3>
-<p>
-    <ul>
-        <li>
-            Game created
-        </li>
-    </ul>
-</p>
-<h3>
-    <a href="Out at dark 1.1.zip">Download version 1.1</a>
-</h3>
-<p>
-    <ul>
-        <li>
-            Fixed box disapearing glitch
-        </li>
-        <li>
-            Added FPS indicator & FPS cap in settings
-        </li>
-        <li>
-            Fixed throwing (throw with Q)
-        </li>
-        <li>
-            Changed/added some instruction labels
-        </li>
-        <li>
-            Enabled crouching with C
-        </li>
-        <li>
-            Made Level 3 Jump much easier
-        </li>
-        <li>
-            Made Level 5 ramps possible to walk up without jumping
-        </li>
-        <li>
-            Made Level 9 gap a bit shorter
-        </li>
-    </ul>
-</p>
+<head>
+    <title>Out at dark download</title>
+</head>
+<body>
+    <h1>
+        <a href="Out at dark 1.1.zip">Download Latest Version<br></a>
+    </h1>
+    <div id="hide" class="tab-pane">
+        <button onclick="changeTab('instructions')">Show instructions</button>
+    </div>
+    <div id="instructions" class="tab-pane">
+        <button onclick="changeTab('hide')">Hide instructions</button>
+        <p>
+            <ol>
+                <li>
+                    Download zip file via link of choice
+                </li>
+                <li>
+                    Go to zipped file in downloads
+                </li>
+                <li>
+                    Click on zip once
+                </li>
+                <li>
+                    Click extract all at the top
+                </li>
+                <li>
+                    Click extract
+                </li>
+                <li>
+                    Open folders
+                </li>
+                <li>
+                    Double click the file called "Out at dark.exe"
+                </li>
+                <li>
+                    If a Windows Protection pop-up appears, click more info and then run anyway
+                </li>
+                <li>
+                    Play the game! (Game instructions included in-game)
+                </li>
+            </ol>
+        </p>
+    </div>
+    <h3>
+        <a href="Out at dark 1.0.zip">Download version 1.0 </a>
+    </h3>
+    <p>
+        <ul>
+            <li>
+                <strong>Game created</strong>
+            </li>
+        </ul>
+    </p>
+    <h3>
+        <a href="Out at dark 1.1.zip">Download version 1.1</a>
+    </h3>
+    <p>
+        <ul>
+            <li>
+                Fixed box disapearing glitch
+            </li>
+            <li>
+                Added FPS indicator & FPS cap in settings
+            </li>
+            <li>
+                Fixed throwing (throw with Q)
+            </li>
+            <li>
+                Changed/added some instruction labels
+            </li>
+            <li>
+                <strong>Enabled crouching with C</strong>
+            </li>
+            <li>
+                Made Level 3 Jump much easier
+            </li>
+            <li>
+                Made Level 5 ramps possible to walk up without jumping
+            </li>
+            <li>
+                Made Level 9 gap a bit shorter
+            </li>
+        </ul>
+    </p>
+    <h3>
+        <a href="Out at dark 1.2.zip">Download version 1.2</a>
+    </h3>
+    <p>
+        <ul>
+            <li>
+                <strong>Added level 11</strong>
+            </li>
+            <li>
+                Fixed box hopping
+            </li>
+            <li>
+                Fixed reset surfing
+            </li>
+            <li>
+                Changed/added some instruction labels
+            </li>
+        </ul>
+    </p>
+</body>
+<script>
+    function changeTab(tabId) {
+        var tabPanes = document.getElementsByClassName("tab-pane");
+        for (var i = 0; i < tabPanes.length; i++) {
+            tabPanes[i].style.display = 'none';
+        }
+        var tabPane = document.getElementById(tabId);
+        tabPane.style.display = "block";
+
+    }
+    function Toggle(tabId) {
+        
+    }
+    changeTab('hide')
+</script>
