@@ -17,4 +17,75 @@
         background-color: #888;
     }
 </style>
-<h1>Under construction</h1>
+<h1>
+    <a href="Out at dark.exe">Download executable</a><br>
+    <a href="Out at dark.pck">Download the 1.2 pck</a>
+</h1>
+<h3>Note: new download instructions</h3>
+<div id="instructions">
+    <div id="hidden">
+        <button class="tab-button" onclick="toggleInstructions()">Show instructions</button>
+    </div>
+    <div id="shown">
+        <button class="tab-button" onclick="toggleInstructions()">Hide instructions</button>
+        <p>
+            <ol>
+                <li>If you don't have the executable (You only need one, even across versions):
+                    <ol>
+                        <li>Click the download for the executable</li>
+                        <li>Go into the download pane</li>
+                        <li>Click where it says unverified download blocked</li>
+                        <li>Click download unverified file</li>
+                    </ol>
+                </li>
+                <li>Download the latest pck</li>
+                <li>Make sure the pck and the executable are in the same folder (that folder can just be downloads if you want)</li>
+                <li>Double click "Out at dark.exe" to play</li>
+            </ol>
+        </p>    
+    </div>
+</div>
+<h4>Version 1.1 changes</h4>
+<ul>
+    <li>Made level 3 jump easier</li>
+    <strong><li>Made level 5 ledges walkable</li></strong>
+    <li>Made level 9 gap shorter</li>
+    <li>Made instruction labels more clear</li>
+</ul>
+<h4>Version 1.2 changes</h4>
+<ul>
+    <strong><li>Added level 11</li></strong>
+    <li>Added night sky</li>
+    <li>Fixed box hopping (mostly)</li>
+    <li>Fixed reset surfing</li>
+    <li>Changed some instruction labels</li>
+</ul>
+<script>
+    var hidden = true;
+    var hiddenPane = document.getElementById("hidden");
+    var shownPane = document.getElementById("shown");
+    hiddenPane.style.display = 'block';
+    shownPane.style.display = 'none';
+    function toggleInstructions() {
+        if (hidden == true) {
+            hiddenPane.style.display = 'none';
+            shownPane.style.display = 'block';
+            hidden = false;
+        }
+        else {
+            hiddenPane.style.display = 'block';
+            shownPane.style.display = 'none';
+            hidden = true;
+        }
+    }
+    function changeTab(tabId) {
+        var tabPanes = document.getElementsByClassName("tab-pane");
+        for (var i = 0; i < tabPanes.length; i++) {
+            tabPanes[i].style.display = 'none';
+        }
+        var tabPane = document.getElementById(tabId);
+        tabPane.style.display = "block";
+
+    }
+    changeTab('hide')
+</script>
